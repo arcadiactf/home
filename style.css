@@ -290,6 +290,9 @@ body {
 
 /* 📱 Mobile View */
 @media (max-width: 600px) {
+  .header-bar{
+    width: 80%;
+  }
   .about-content {
     padding: 20px;
   }
