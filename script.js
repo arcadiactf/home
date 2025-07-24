@@ -42,7 +42,7 @@ const timer = setInterval(() => {
   document.getElementById("seconds").textContent = seconds;
 }, 1000);
 
-function toggleMenu() {
+  function toggleMenu() {
     const menu = document.getElementById("dropdown");
     if (menu.style.display === "flex") {
       menu.style.display = "none";
@@ -50,6 +50,19 @@ function toggleMenu() {
       menu.style.display = "flex";
     }
   }
+
+  // Auto-close menu when a dropdown link is clicked
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("#dropdown a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const menu = document.getElementById("dropdown");
+        if (menu.style.display === "flex") {
+          menu.style.display = "none";
+        }
+      });
+    });
+  });
 
     let lastScroll = window.scrollY;
   const socialBar = document.getElementById('mobileSmartSocial');
