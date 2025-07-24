@@ -290,9 +290,31 @@ body {
 
 /* 📱 Mobile View */
 @media (max-width: 600px) {
-  .header-bar{
-    width: 80%;
-  }
+   .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .header-text {
+      flex: 1;
+      text-align: center;
+      margin: 0;
+      font-size: 15px;
+      color: black;
+      font-weight: bold;
+    }
+    .header-text p {
+  font-size: 10px; /* smaller size */
+  font-style: italic;
+  color: #000;
+  margin: 5px 0 0;
+}
   .about-content {
     padding: 20px;
   }
